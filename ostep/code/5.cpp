@@ -9,6 +9,7 @@ int main() {
 
     if (rc == 0) {
         // child process
+        wait(NULL);
         char *path = "/bin/ls";
         char *argv[] = {"/bin/ls", NULL};
         execv(path, argv);
